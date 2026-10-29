@@ -1,0 +1,37 @@
+[
+  {
+    "id": "all",
+    "label": "전체 용어 보기",
+    "short": "전체"
+  },
+  {
+    "id": "essential-6",
+    "label": "⭐ 필수 보완 6선 (REA·인블로그·Ahrefs·모델증류·백링크분리)",
+    "short": "⭐ 필수보완 6선"
+  },
+  {
+    "id": "g1-model-agent-app",
+    "label": "① 모델 vs 에이전트 vs 앱 (두뇌·기사·완성차)",
+    "short": "① 모델·에이전트·앱"
+  },
+  {
+    "id": "g2-local-vps-remote",
+    "label": "② 로컬 vs VPS vs 원격 (내PC·24시간서버·원격조종)",
+    "short": "② 로컬·VPS·원격"
+  },
+  {
+    "id": "g3-api-mcp-cli",
+    "label": "③ API vs MCP vs CLI (통신창구·AI용USB-C·검은창명령)",
+    "short": "③ API·MCP·CLI"
+  },
+  {
+    "id": "g4-github-deploy-db",
+    "label": "④ GitHub vs 배포 vs DB (코드보관·사이트오픈·실시간장부)",
+    "short": "④ GitHub·배포·DB"
+  },
+  {
+    "id": "g5-backlink-seo-obsidian",
+    "label": "⑤ SEO 백링크 vs 옵시디언 백링크 (외부추천 vs 내부노트)",
+    "short": "⑤ 백링크·SEO·스키마"
+  }
+]

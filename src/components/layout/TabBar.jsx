@@ -1,13 +1,15 @@
 import { NavLink } from 'react-router-dom'
 import { NAV_ITEMS } from './navItems.js'
 
+const MOBILE_ITEMS = NAV_ITEMS.filter((item) => !item.desktopOnly)
+
 export default function TabBar() {
   return (
     <nav
       aria-label="하단 메뉴"
-      className="fixed inset-x-0 bottom-0 z-20 grid h-14 grid-cols-4 border-t border-border bg-bg md:hidden"
+      className="fixed inset-x-0 bottom-0 z-20 grid h-14 grid-cols-5 border-t border-border bg-bg md:hidden"
     >
-      {NAV_ITEMS.map(({ to, label, icon: Icon }) => (
+      {MOBILE_ITEMS.map(({ to, label, icon: Icon }) => (
         <NavLink
           key={to}
           to={to}

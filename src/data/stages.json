@@ -43,5 +43,70 @@
     "id": 9,
     "name": "파이썬 로컬앱",
     "cardCount": 17
+  },
+  {
+    "id": 10,
+    "name": "AI 두뇌와 에이전트 제품",
+    "cardCount": 21
+  },
+  {
+    "id": 11,
+    "name": "실행 위치와 터미널 (Local·VPS·원격)",
+    "cardCount": 12
+  },
+  {
+    "id": 12,
+    "name": "연결 규격·계정·권한 (API·MCP·BYOK)",
+    "cardCount": 9
+  },
+  {
+    "id": 13,
+    "name": "브라우저 제어와 웹 자동화",
+    "cardCount": 6
+  },
+  {
+    "id": 14,
+    "name": "비용·속도·맥락 관리",
+    "cardCount": 9
+  },
+  {
+    "id": 15,
+    "name": "워크플로 자동화와 연락 채널",
+    "cardCount": 13
+  },
+  {
+    "id": 16,
+    "name": "GitHub와 코드 버전 관리 심화",
+    "cardCount": 11
+  },
+  {
+    "id": 17,
+    "name": "스킬·옵시디언·지식관리 (RAG)",
+    "cardCount": 16
+  },
+  {
+    "id": 18,
+    "name": "웹·앱 개발과 스키마 설계",
+    "cardCount": 16
+  },
+  {
+    "id": 19,
+    "name": "배포·호스팅·백엔드 DB 실전",
+    "cardCount": 15
+  },
+  {
+    "id": 20,
+    "name": "검색 노출(SEO·인블로그·Ahrefs·백링크)",
+    "cardCount": 31
+  },
+  {
+    "id": 21,
+    "name": "숏폼·콘텐츠 제작 자동화 공정",
+    "cardCount": 24
+  },
+  {
+    "id": 22,
+    "name": "운영 기준·검수(QA)·최종 승인",
+    "cardCount": 16
   }
 ]

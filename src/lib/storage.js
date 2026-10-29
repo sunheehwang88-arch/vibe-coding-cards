@@ -2,13 +2,21 @@
 // 모든 접근은 try/catch. 실패하면 ok:false를 돌려주고 앱은 메모리 상태로 계속 동작한다.
 
 export const STORAGE_KEY = 'vcc:v1'
-export const DAILY_NEW_OPTIONS = [3, 5, 8]
+export const DAILY_NEW_OPTIONS = [3, 5, 8, 15]
 
 export function createEmptyState() {
   return {
     version: 1,
     settings: { dailyNew: 5, focusStage: null },
     cards: {},
+    selfMarks: {}, // { [cardId]: 'confused' | 'unsure' | 'mastered' }
+    scenarioQuiz: {
+      answers: {}, // { [qId]: { selectedIdx, isCorrect, timestamp } }
+      wrongIds: [], // string[]
+    },
+    vsBattle: {
+      answers: {}, // { [qId]: selectedIdx }
+    },
     daily: { day: null, newIds: [] },
     streak: { count: 0, lastDay: null, freezeLeft: 1 },
     session: null,
@@ -37,6 +45,18 @@ function migrate(raw) {
     streak: { ...base.streak, ...raw.streak },
     stats: { ...base.stats, ...raw.stats },
     cards: raw.cards ?? {},
+    selfMarks: raw.selfMarks ?? {},
+    scenarioQuiz: {
+      ...base.scenarioQuiz,
+      ...(raw.scenarioQuiz ?? {}),
+      answers: raw.scenarioQuiz?.answers ?? {},
+      wrongIds: raw.scenarioQuiz?.wrongIds ?? [],
+    },
+    vsBattle: {
+      ...base.vsBattle,
+      ...(raw.vsBattle ?? {}),
+      answers: raw.vsBattle?.answers ?? {},
+    },
   }
 }
 

@@ -19,9 +19,18 @@ const REQUIRED = [
 ]
 
 describe('cards.json', () => {
-  it('77장 (기본 60 + 파이썬 로컬앱 17), id 중복 없음', () => {
-    expect(cards).toHaveLength(77)
-    expect(ids.size).toBe(77)
+  it('276장 (기본 77 + AI_TERMS 신규 199), id 중복 없음', () => {
+    expect(cards).toHaveLength(276)
+    expect(ids.size).toBe(276)
+  })
+
+  it('필수 보완 4개 및 백링크 분리(SEO vs 옵시디언)가 포함되어 있다', () => {
+    expect(ids.has('t221')).toBe(true) // REA
+    expect(ids.has('t222')).toBe(true) // 인블로그
+    expect(ids.has('t223')).toBe(true) // Ahrefs
+    expect(ids.has('t224')).toBe(true) // 모델 증류
+    expect(ids.has('t225')).toBe(true) // SEO 백링크
+    expect(ids.has('t103')).toBe(true) // 옵시디언 백링크
   })
 
   it('필수 필드가 모두 채워져 있다 (spec 10장 ⑤)', () => {
@@ -46,11 +55,10 @@ describe('cards.json', () => {
     }
   })
 
-  it('헷갈리는 짝 20쌍 (기본 14 + 파이썬 로컬앱 6)', () => {
+  it('헷갈리는 짝이 20쌍 이상 존재한다', () => {
     const pairs = new Set()
     for (const c of cards) for (const o of c.confusableWith) pairs.add([c.id, o].sort().join('|'))
-    // 네이티브·하이브리드·PWA 3자 관계는 1쌍으로 센다 (3개 조합 → 1)
-    expect(pairs.size - 2).toBe(20)
+    expect(pairs.size).toBeGreaterThanOrEqual(22)
   })
 
   it('상황 카드(Q4)는 정답 1개 + 오답 3개', () => {

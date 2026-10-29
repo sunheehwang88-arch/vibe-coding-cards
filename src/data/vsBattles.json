@@ -1,0 +1,554 @@
+[
+  {
+    "id": "vs-arena-01",
+    "groupTag": "① 모델 vs 에이전트 vs 앱",
+    "badge": "4대 혼동 계층 ① · 1:1:1 삼파전",
+    "title": "모델(Model) vs 에이전트(Agent) vs 앱(App)",
+    "subtitle": "두뇌 vs 자율주행 기사 vs 완성차 서비스 — 이름에 현혹되지 않고 역할 층위를 꿰뚫는 가장 중요한 구분!",
+    "contenders": [
+      {
+        "name": "모델 (LLM · GPT · Claude · Gemini)",
+        "metaphor": "🧠 생각하는 두뇌 (엔진)",
+        "role": "언어를 이해하고 추론해 다음 글자·판단을 생성하는 핵심 인공지능 두뇌 자체",
+        "examples": "GPT 계열, Claude 모델, Gemini 모델, GLM, Jev"
+      },
+      {
+        "name": "에이전트 (AI Agent · Codex · Claude Code)",
+        "metaphor": "🧑‍✈️ 자율주행 기사 (추론+손발 도구)",
+        "role": "목표를 받으면 스스로 추론(REA)하며 파일 읽기·명령 실행·브라우저 조작 등 손발 도구를 써서 여러 단계를 완수하는 작업자",
+        "examples": "Codex, Claude Code, OpenClaw, Hermes Agent, Kilo Code"
+      },
+      {
+        "name": "앱 / 제품 (ChatGPT · Claude 웹 · Genspark)",
+        "metaphor": "🚗 완성차 서비스 (화면+편의기능)",
+        "role": "사람이 로그인해서 바로 채팅하고 파일을 올리고 결과를 볼 수 있도록 모델과 기능을 감싼 완제품 서비스 화면",
+        "examples": "ChatGPT 웹/앱, Claude 웹/앱, Genspark, Aside"
+      }
+    ],
+    "questions": [
+      {
+        "qId": "vs1-q1",
+        "prompt": "내 컴퓨터의 프로젝트 폴더에 직접 들어가서 10개의 코드 파일을 읽고, 버그를 수정한 뒤, 터미널 테스트까지 스스로 반복(REA 루프)해 완수하는 역할은 어느 계층인가요?",
+        "options": [
+          {
+            "label": "🧠 모델 (Model — 예: 순수 LLM 두뇌)",
+            "isCorrect": false,
+            "whyNot": "모델(LLM)은 뛰어난 두뇌지만 혼자서는 내 컴퓨터 폴더를 열거나 터미널 명령을 실행할 '손발(도구와 실행 권한)'이 없습니다."
+          },
+          {
+            "label": "🧑‍✈️ 에이전트 (Agent — 예: Codex, Claude Code)",
+            "isCorrect": true,
+            "whyRight": "정답입니다! 에이전트는 모델(두뇌)에 파일 수정·터미널 실행 같은 손발 도구(Tool)를 연결해, 스스로 추론(Reasoning)하고 행동(Action)하며 여러 단계의 실무를 완수하는 자율 작업자입니다."
+          },
+          {
+            "label": "🚗 일반 대화형 앱 (App — 예: 기본 웹 채팅창)",
+            "isCorrect": false,
+            "whyNot": "일반 웹 채팅창은 사람이 직접 코드를 복사해 붙여넣고 물어보는 대화 화면일 뿐, 내 로컬 PC 폴더 안에서 자율적으로 파일 수정과 실행을 반복하지 못합니다."
+          }
+        ]
+      },
+      {
+        "qId": "vs1-q2",
+        "prompt": "같은 'Claude'라는 단어가 들어갈 때, 'Kilo Code 설정에서 Claude Sonnet을 골랐다'와 'Claude Code를 터미널에서 실행했다'는 각각 무엇을 뜻하나요?",
+        "options": [
+          {
+            "label": "앞은 '생각할 AI 두뇌(모델)'를 고른 것이고, 뒤는 '자율 코딩 작업자(에이전트)'를 켠 것이다.",
+            "isCorrect": true,
+            "whyRight": "정답입니다! 같은 브랜드 이름이더라도 문맥에 따라 '모델(두뇌)'을 가리키는지, 그 두뇌로 일하는 '에이전트/앱'을 가리키는지 구분하는 것이 핵심입니다."
+          },
+          {
+            "label": "둘 다 완전히 똑같은 챗봇 화면을 여는 행위다.",
+            "isCorrect": false,
+            "whyNot": "에이전트 설정에서 모델을 고르는 것은 '어떤 두뇌 부품을 끼울지' 선택하는 것이고, Claude Code를 켜는 것은 '파일 수정·명령 실행 권한을 가진 코딩 에이전트 프로그램'을 구동하는 것입니다."
+          },
+          {
+            "label": "앞은 VPS 서버를 빌리는 것이고, 뒤는 데이터베이스를 만드는 것이다.",
+            "isCorrect": false,
+            "whyNot": "Claude Sonnet은 AI 모델이고 Claude Code는 코딩 에이전트입니다. 서버 임대(VPS)나 DB와는 다른 계층입니다."
+          }
+        ]
+      }
+    ],
+    "comparisonTable": {
+      "headers": ["비교 기준", "🧠 모델 (Model)", "🧑‍✈️ 에이전트 (Agent)", "🚗 앱 / 제품 (App)"],
+      "rows": [
+        [
+          "초보자 한 줄 비유",
+          "생각하고 글을 짓는 '두뇌(엔진)'",
+          "손발 도구를 써서 심부름을 완수하는 '자율주행 기사'",
+          "운전석·계기판까지 다 갖춘 '완성차 서비스'"
+        ],
+        [
+          "핵심 역할",
+          "텍스트/멀티모달 이해, 추론, 답변 생성",
+          "목표 분해(Reasoning) + 도구 호출(Action) 반복 수행",
+          "사용자 로그인, 채팅 UI, 파일 첨부, 워크스페이스 제공"
+        ],
+        [
+          "손발(파일·터미널 조작)",
+          "혼자서는 없음 (텍스트 입출력만 수행)",
+          "있음 (권한을 부여받은 폴더·터미널·브라우저 조작)",
+          "앱에 내장된 기능 범위 안에서만 작동"
+        ],
+        [
+          "대표 예시",
+          "GPT, Claude 모델, Gemini 모델, GLM, Jev",
+          "Codex, Claude Code, OpenClaw, Hermes, Kilo Code",
+          "ChatGPT, Claude 웹앱, Genspark, Antigravity IDE"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "vs-arena-02",
+    "groupTag": "② 로컬 vs VPS vs 원격",
+    "badge": "4대 혼동 계층 ② · 1:1:1 삼파전",
+    "title": "로컬(Local) vs VPS(가상서버) vs 원격(Remote)",
+    "subtitle": "내 컴퓨터 vs 24시간 켜두는 월세 가상서버 vs 외부 접속 방식 — '어디에 화면이 보이는지'가 아니라 '실제로 어디서 프로그램이 도는지' 구분하기!",
+    "contenders": [
+      {
+        "name": "로컬 (Local)",
+        "metaphor": "💻 내 눈앞의 내 컴퓨터",
+        "role": "내가 직접 사용 중인 노트북·데스크톱 장비에서 프로그램이 실행되는 환경 (전원 끄면 작업도 중단)",
+        "examples": "내 노트북에서 돌리는 Codex, 내 PC의 localhost:3000"
+      },
+      {
+        "name": "VPS (가상 사설 서버)",
+        "metaphor": "🏢 24시간 불 켜진 월세 원룸 컴퓨터",
+        "role": "인터넷을 통해 임대하는 독립된 가상 컴퓨터. 내 노트북을 끄고 자도 24시간 365일 멈추지 않고 봇·서버를 구동",
+        "examples": "카페24 VPS, AWS Lightsail/EC2에 올린 24시간 OpenClaw·n8n"
+      },
+      {
+        "name": "원격 (Remote)",
+        "metaphor": "📡 멀리서 조종하는 리모컨 통신 방식",
+        "role": "다른 장소·기기(휴대폰, 다른 PC)에서 네트워크(SSH, 메신저 등)를 통해 실행 컴퓨터에 접속·지시하는 방식 자체",
+        "examples": "밖에서 휴대폰 텔레그램으로 집 PC에 지시, SSH로 VPS에 접속"
+      }
+    ],
+    "questions": [
+      {
+        "qId": "vs2-q1",
+        "prompt": "내 노트북에 OpenClaw를 깔고 휴대폰 텔레그램과 연결했습니다. 이제 노트북 덮개를 덮고 전원을 완전히 끈 채 외출해도 텔레그램으로 내 노트북 파일을 정리시킬 수 있을까요?",
+        "options": [
+          {
+            "label": "가능하다. 텔레그램은 원격(Remote) 메신저니까 노트북이 꺼져도 돌아간다.",
+            "isCorrect": false,
+            "whyNot": "텔레그램은 지시를 전달하는 '연락 통로(채널)'일 뿐입니다! 실제로 프로그램을 돌리는 실행 장소인 '내 노트북(로컬)'의 전원이 꺼지면 에이전트도 즉시 멈춥니다."
+          },
+          {
+            "label": "불가능하다. 노트북(로컬) 전원이 꺼지면 그 안의 프로그램도 멈추므로, 24시간 돌리려면 VPS 같은 상시 서버에 올려야 한다.",
+            "isCorrect": true,
+            "whyRight": "정답입니다! '원격으로 지시하는 것(Remote)'과 '실제 프로그램이 켜져 돌아가는 장소(Local vs VPS)'는 별개입니다. 내가 자는 동안에도 24시간 봇이 돌아가려면 VPS가 필요합니다."
+          },
+          {
+            "label": "가능하다. GitHub에 코드를 푸시해 두면 GitHub가 24시간 내 노트북 대신 봇을 돌려준다.",
+            "isCorrect": false,
+            "whyNot": "GitHub는 코드 파일과 변경 기록을 보관하는 저장소이지, 24시간 상시 메신저 봇을 구동해 주는 VPS 컴퓨터가 아닙니다."
+          }
+        ]
+      },
+      {
+        "qId": "vs2-q2",
+        "prompt": "내 노트북의 검은 창(PowerShell)을 열고 `ssh` 명령어로 카페24 VPS에 접속한 뒤 파일 삭제 명령을 실행했습니다. 지금 어떤 컴퓨터의 파일이 지워지나요?",
+        "options": [
+          {
+            "label": "내 노트북(로컬) 바탕화면의 파일이 지워진다. 왜냐하면 내 노트북 PowerShell 창에서 쳤기 때문이다.",
+            "isCorrect": false,
+            "whyNot": "화면에 보이는 터미널 창은 내 노트북에 떠 있지만, SSH로 접속한 순간 명령이 실행되는 무대는 'VPS 서버'로 바뀝니다!"
+          },
+          {
+            "label": "접속해 있는 VPS(가상 서버) 안의 파일이 지워진다. 창은 내 PC에 보여도 실제 실행 위치는 원격 연결된 VPS이기 때문이다.",
+            "isCorrect": true,
+            "whyRight": "정답입니다! 눈앞의 화면(터미널 창) 위치에 속지 마세요. SSH로 원격 접속한 뒤에는 내가 치는 모든 명령이 VPS 컴퓨터 안에서 실행됩니다."
+          }
+        ]
+      }
+    ],
+    "comparisonTable": {
+      "headers": ["비교 기준", "💻 로컬 (Local)", "🏢 VPS (가상 사설 서버)", "📡 원격 (Remote)"],
+      "rows": [
+        [
+          "초보자 한 줄 비유",
+          "내 책상 위의 '내 노트북/PC'",
+          "인터넷에 월세 내고 빌린 '24시간 켜진 별도 컴퓨터'",
+          "멀리서 접속해 조종하는 '리모컨 조작 방식'"
+        ],
+        [
+          "내 노트북 전원을 끄면?",
+          "즉시 실행 중단됨",
+          "아무 영향 없이 24시간 계속 돌아감",
+          "접속 대상 컴퓨터가 켜져 있어야만 조작 가능"
+        ],
+        [
+          "내 PC C드라이브 파일 접근",
+          "바로 접근 가능 (내 컴퓨터니까)",
+          "별도 컴퓨터이므로 내 C드라이브가 자동 공유되지 않음",
+          "어느 컴퓨터에 원격 접속했느냐에 따라 다름"
+        ],
+        [
+          "핵심 용도",
+          "직접 개발, 내 로컬 파일 편집, 무료 테스트",
+          "24시간 무중단 자동화 봇(n8n, OpenClaw), 상시 서버 운영",
+          "외출 중 휴대폰 지시, 내 PC에서 SSH로 VPS 관리"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "vs-arena-03",
+    "groupTag": "③ API vs MCP vs CLI",
+    "badge": "4대 혼동 계층 ③ · 1:1:1 삼파전",
+    "title": "API vs MCP vs CLI",
+    "subtitle": "프로그램 간 통신 창구 vs AI 전용 만능 USB-C 연결 규격 vs 검은 화면 텍스트 명령어 — 어떻게 부르고 어떻게 연결하는가!",
+    "contenders": [
+      {
+        "name": "API (Application Programming Interface)",
+        "metaphor": "🍽️ 프로그램 간 공식 주문 창구",
+        "role": "한 프로그램이 다른 프로그램(AI 모델, 결제, 문자 발송 등)의 기능을 코드로 요청하고 결과를 받아오는 범용 통신 인터페이스",
+        "examples": "OpenAI API 호출, SOLAPI 문자 발송 API, Typecast API"
+      },
+      {
+        "name": "MCP (Model Context Protocol)",
+        "metaphor": "🔌 AI 전용 만능 USB-C 멀티허브 규격",
+        "role": "AI 앱(Claude, Antigravity 등)이 외부 도구·파일·DB·서비스에 똑같은 표준 방식으로 쉽게 연결되도록 만든 연결 규격",
+        "examples": "구글 드라이브 MCP 서버, 노션/DB 검색 MCP 도구 연결"
+      },
+      {
+        "name": "CLI (Command Line Interface)",
+        "metaphor": "⌨️ 검은 화면 텍스트 명령어 조작 방식",
+        "role": "마우스로 버튼을 누르는(GUI) 대신 터미널 창에 글자 명령어를 타이핑해서 프로그램을 실행·조작하는 방식",
+        "examples": "`codex`, `claude`, `git push`, `npm install`, `wrangler`"
+      }
+    ],
+    "questions": [
+      {
+        "qId": "vs3-q1",
+        "prompt": "예전에는 AI 에이전트마다 구글 드라이브, 슬랙, DB를 연결할 때 각각 다른 커스텀 코드를 짜야 했는데, 이제는 마치 'USB-C 케이블'처럼 표준 규격 하나로 어떤 AI에나 도구를 꽂아 쓸 수 있게 해주는 규격은 무엇인가요?",
+        "options": [
+          {
+            "label": "🔌 MCP (Model Context Protocol)",
+            "isCorrect": true,
+            "whyRight": "정답입니다! MCP는 AI 에이전트가 외부 도구·자료·기능을 표준화된 방식으로 인식하고 연결해 쓸 수 있게 해주는 'AI 전용 만능 USB-C 연결 규격'입니다."
+          },
+          {
+            "label": "⌨️ CLI (Command Line Interface)",
+            "isCorrect": false,
+            "whyNot": "CLI는 터미널에 글자 명령어를 쳐서 프로그램을 조작하는 방식이지, AI와 외부 도구를 이어주는 표준 프로토콜 규격이 아닙니다."
+          },
+          {
+            "label": "⚙️ n8n (자동화 워크플로 플랫폼)",
+            "isCorrect": false,
+            "whyNot": "n8n은 업무 순서를 연결해 실행하는 '자동화 앱/플랫폼'이지, 연결 표준 규격 자체가 아닙니다(n8n이 MCP를 활용할 수는 있음)."
+          }
+        ]
+      },
+      {
+        "qId": "vs3-q2",
+        "prompt": "터미널에 `codex`라는 글자 명령어(CLI)로 에이전트를 켜서 쓰면, 외부 AI 회사 서버의 API 요금은 무조건 무료가 되나요?",
+        "options": [
+          {
+            "label": "무료가 된다. CLI는 내 컴퓨터 검은 창에서 글자로 실행하는 방식이니까 요금이 안 나간다.",
+            "isCorrect": false,
+            "whyNot": "절대 주의하세요! CLI는 '마우스 대신 글자로 조작하는 화면 방식'일 뿐입니다. 그 프로그램이 뒤에서 API 키로 모델을 호출한다면 API 요금이 그대로 청구됩니다."
+          },
+          {
+            "label": "무료가 되지 않는다. CLI는 조작 방식일 뿐이며, 뒤에서 API를 호출해 AI 두뇌를 쓰면 인증 방식(API 키 vs 구독 연동)에 따라 비용·한도가 차감된다.",
+            "isCorrect": true,
+            "whyRight": "정답입니다! 하나의 작업에서 CLI(글자로 실행) + MCP(도구 연결) + API(모델 서버 통신)가 동시에 쓰일 수 있으며, CLI를 쓴다고 API 비용이 공짜가 되지는 않습니다."
+          }
+        ]
+      }
+    ],
+    "comparisonTable": {
+      "headers": ["비교 기준", "🍽️ API", "🔌 MCP", "⌨️ CLI"],
+      "rows": [
+        [
+          "초보자 한 줄 비유",
+          "프로그램끼리 주문서를 주고받는 '공식 통신 창구'",
+          "AI에게 손발 도구를 바로 꽂아주는 'AI 전용 USB-C 규격'",
+          "마우스 대신 검은 창에 치는 '글자 명령어 조작법'"
+        ],
+        [
+          "누가 누구와 소통하나?",
+          "프로그램 ↔ 프로그램 (웹앱 ↔ 외부 서비스 서버)",
+          "AI 에이전트(클라이언트) ↔ 도구·자료 제공기(MCP 서버)",
+          "사람(또는 AI 스크립트) ↔ 터미널 프로그램"
+        ],
+        [
+          "서로 대체재인가?",
+          "아니요! 모든 소프트웨어 통신의 가장 기본 뿌리",
+          "API나 로컬 기능을 감싸서 'AI가 쓰기 좋은 표준 도구'로 제공",
+          "CLI 프로그램이 내부적으로 API와 MCP를 호출하며 작동함"
+        ],
+        [
+          "흔한 오해",
+          "API 자체가 인공지능이나 자동화 앱인 줄 앎",
+          "n8n이나 Make 같은 자동화 앱과 똑같은 것인 줄 앎",
+          "CLI로 실행하면 API 요금이 공짜이거나 로컬 모델인 줄 앎"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "vs-arena-04",
+    "groupTag": "④ GitHub vs 배포(Deploy) vs DB",
+    "badge": "4대 혼동 계층 ④ · 1:1:1 삼파전",
+    "title": "GitHub vs 배포(Deploy · Vercel/Netlify) vs DB(Supabase)",
+    "subtitle": "코드 버전 보관소 vs 실제 인터넷 주소로 서비스 오픈 vs 실시간 데이터 장부 — 웹사이트를 만들고 운영할 때 절대 섞으면 안 되는 3대 기둥!",
+    "contenders": [
+      {
+        "name": "GitHub (깃허브)",
+        "metaphor": "📦 코드 설계도 버전 금고",
+        "role": "내가 짠 프로그램 소스코드 파일과 변경 이력(Git 커밋)을 온라인에 보관·백업·협업하는 저장소",
+        "examples": "GitHub Repository, Commit, Push, Pull, Clone"
+      },
+      {
+        "name": "배포 / 호스팅 (Deploy · Vercel · Netlify)",
+        "metaphor": "🚀 실제 손님이 들어오는 인터넷 매장 오픈",
+        "role": "보관된 코드를 빌드해 실제 인터넷 주소(URL)로 누구나 접속해 화면을 보고 쓸 수 있게 띄워 운영하는 것",
+        "examples": "Vercel, Netlify (`*.netlify.app`), Cloudflare Pages"
+      },
+      {
+        "name": "DB / 백엔드 (Database · Supabase · Neon)",
+        "metaphor": "🗄️ 손님 주문·회원 정보를 적는 실시간 장부",
+        "role": "사이트 운영 중에 사용자가 입력하는 문의, 예약, 회원 정보, 프로젝트 데이터를 구조화해 실시간 저장·조회하는 시스템",
+        "examples": "PostgreSQL, Supabase, Neon, Cloudflare D1, SQLite"
+      }
+    ],
+    "questions": [
+      {
+        "qId": "vs4-q1",
+        "prompt": "열심히 만든 카드게임 코드를 `git push`로 비공개 GitHub 저장소에 올렸습니다. 이제 고객들에게 이 GitHub 저장소 주소를 보내면 바로 카드게임 웹사이트가 실행되나요?",
+        "options": [
+          {
+            "label": "바로 실행된다. GitHub에 푸시(Push)하는 것이 곧 웹사이트 배포(Deploy)다.",
+            "isCorrect": false,
+            "whyNot": "GitHub는 코드 파일과 변경 역사를 보관하는 '설계도 금고'입니다! 금고에 설계도를 넣었다고 매장이 자동 오픈되지 않듯, GitHub Push 자체가 곧 웹사이트 배포는 아닙니다."
+          },
+          {
+            "label": "실행되지 않는다. GitHub는 코드 보관소일 뿐이며, 다른 사람이 주소로 접속해 게임을 하려면 Netlify나 Vercel 같은 플랫폼에 '배포(Deploy)'해야 한다.",
+            "isCorrect": true,
+            "whyRight": "정답입니다! 코드는 GitHub에 보관하고, 그 저장소를 Netlify나 Vercel에 연결해 빌드·배포(Deploy)해야 사람들이 접속할 수 있는 웹사이트 주소(`*.netlify.app` 등)가 열립니다."
+          },
+          {
+            "label": "PostgreSQL 스키마만 작성하면 자동으로 인터넷 주소가 생긴다.",
+            "isCorrect": false,
+            "whyNot": "DB 스키마는 데이터베이스의 표 구조를 설계하는 것이지 웹사이트를 인터넷에 배포하는 기능이 아닙니다."
+          }
+        ]
+      },
+      {
+        "qId": "vs4-q2",
+        "prompt": "사내 규모검토 웹앱을 Vercel로 배포했습니다. 이제 직원 5명이 각자 자기 컴퓨터에서 입력한 프로젝트 검토 내역을 서로 실시간으로 공유하고 조회하려면 무엇을 연결해야 할까요?",
+        "options": [
+          {
+            "label": "🗄️ 공용 데이터베이스 / 백엔드 (예: Supabase, PostgreSQL, Neon)",
+            "isCorrect": true,
+            "whyRight": "정답입니다! 여러 사용자가 실시간으로 데이터를 저장하고 함께 조회하려면 구조화된 공용 장부인 데이터베이스(DB)와 인증(Auth) 백엔드가 필요합니다."
+          },
+          {
+            "label": "💻 각 직원의 브라우저 LocalStorage만 쓰면 5명 PC끼리 자동 동기화된다.",
+            "isCorrect": false,
+            "whyNot": "브라우저 LocalStorage는 '지금 열려 있는 내 컴퓨터의 내 브라우저' 안에만 저장됩니다. 다른 직원 PC나 내 휴대폰과 자동으로 데이터를 공유하지 못합니다."
+          },
+          {
+            "label": "📄 README.md 파일만 적어두면 실시간 데이터베이스 역할을 대신한다.",
+            "isCorrect": false,
+            "whyNot": "README.md는 프로젝트 사용 설명서 문서일 뿐, 실시간 사용자 데이터를 저장·조회하는 DB가 아닙니다."
+          }
+        ]
+      }
+    ],
+    "comparisonTable": {
+      "headers": [
+        "비교 기준",
+        "📦 GitHub (코드 보관)",
+        "🚀 배포·호스팅 (Vercel/Netlify)",
+        "🗄️ 데이터베이스 (Supabase/DB)"
+      ],
+      "rows": [
+        [
+          "초보자 한 줄 비유",
+          "요리 레시피와 수정 역사를 보관하는 '금고'",
+          "레시피대로 요리해 손님을 받는 '실제 레스토랑 매장'",
+          "손님 예약 명단과 주문 내역을 적는 '실시간 영업 장부'"
+        ],
+        [
+          "무엇을 다루나?",
+          "소스코드 파일(`.tsx`, `.html`)과 버전 기록(Commit)",
+          "빌드된 웹사이트 실행 화면과 접속 주소(URL/도메인)",
+          "회원 계정, 프로젝트 표(테이블), 상태값 등 구조화 데이터"
+        ],
+        [
+          "이게 없으면 생기는 일",
+          "코드를 수정하다 망쳤을 때 옛날 버전으로 못 돌아감",
+          "내 컴퓨터(`localhost`)에서만 보이고 남들은 접속 못 함",
+          "새로고침하거나 다른 기기에서 열면 입력한 데이터가 안 보임"
+        ],
+        [
+          "대표 도구",
+          "Git, GitHub",
+          "Vercel, Netlify, Cloudflare Pages, Cafe24 호스팅",
+          "PostgreSQL, Supabase, Neon, SQLite, Cloudflare D1"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "vs-arena-05",
+    "groupTag": "⑤ SEO 백링크 vs 옵시디언 백링크",
+    "badge": "백링크 완벽 분리 · 1:1 집중 대결",
+    "title": "SEO 백링크(외부 추천 링크) vs 옵시디언 백링크(개인 노트 연결)",
+    "subtitle": "글자만 똑같은 '백링크(Backlink)', 완전히 다른 두 세계! 구글 검색 순위를 올리는 외부 링크와 내 노트 폴더 안의 메모 연결을 확실히 분리하세요.",
+    "contenders": [
+      {
+        "name": "SEO 백링크 (외부 웹사이트 인바운드 링크)",
+        "metaphor": "🌐 남의 웹사이트가 써준 온라인 추천장",
+        "role": "외부의 다른 웹사이트(언론사, 타 블로그 등)가 내 웹사이트 주소를 링크해 준 내역. 검색엔진이 내 사이트의 신뢰도·권위를 높게 평가하는 핵심 SEO 신호",
+        "examples": "타사 테크 블로그·매거진 기사에 걸린 우리 홈페이지/인블로그 링크 (Ahrefs로 분석)"
+      },
+      {
+        "name": "옵시디언 백링크 (Obsidian Backlink · Graph View)",
+        "metaphor": "🕸️ 내 개인 노트장 안의 메모 연결선",
+        "role": "내 컴퓨터 개인 노트 보관소(Vault) 안에서 노트 A와 노트 B가 `[[노트이름]]`으로 서로 참조·연결된 내부 내역",
+        "examples": "옵시디언에서 'CP154 대본 노트'가 'CHO 공통 기준 노트'를 가리키는 내부 링크"
+      }
+    ],
+    "questions": [
+      {
+        "qId": "vs5-q1",
+        "prompt": "우리 회사 홈페이지의 구글 검색 노출 순위(SEO)를 높이고 싶습니다. 내 노트북의 옵시디언(Obsidian) 앱 안에서 우리 회사 소개 노트에 `[[백링크]]`를 1,000개 걸어두면 구글 검색 순위가 오를까요?",
+        "options": [
+          {
+            "label": "전혀 오르지 않는다! 옵시디언 백링크는 내 개인 노트 폴더 안의 메모 연결일 뿐이며, 구글 검색 신뢰도를 높이려면 외부 웹사이트에서 걸어주는 'SEO 백링크'가 필요하다.",
+            "isCorrect": true,
+            "whyRight": "정답입니다! 옵시디언 백링크는 내 로컬 폴더(Vault) 안에서 내 노트끼리 이어준 선이라 구글 검색봇은 알지도 못하고 SEO와 무관합니다. 검색엔진 신뢰도를 높이는 것은 외부 사이트가 내 사이트를 링크해 주는 'SEO 백링크'입니다!"
+          },
+          {
+            "label": "크게 오른다! 백링크라는 이름이 같으므로 옵시디언 그래프 뷰에 선이 많아질수록 구글 1페이지에 노출된다.",
+            "isCorrect": false,
+            "whyNot": "이름만 같을 뿐 완전히 다른 개념입니다! 옵시디언의 그래프 뷰 연결선은 내 개인 지식 정리용이며 구글 검색엔진 점수와 아무 관련이 없습니다."
+          }
+        ]
+      },
+      {
+        "qId": "vs5-q2",
+        "prompt": "경쟁사 웹사이트가 어떤 외부 미디어·블로그로부터 'SEO 백링크'를 많이 받아서 검색 상위에 노출되고 있는지 조사하고, 검색 키워드 난이도를 분석하려면 어떤 도구를 써야 할까요?",
+        "options": [
+          {
+            "label": "🔭 Ahrefs (에이치레프스 — 전문 SEO 마케팅 분석 도구)",
+            "isCorrect": true,
+            "whyRight": "정답입니다! Ahrefs는 검색 트래픽, 키워드 난이도, 외부 SEO 백링크 현황을 분석하는 전문 SEO 마케팅 도구입니다. 그리고 이렇게 세운 전략으로 자사 도메인에 기업용 SEO 블로그를 운영할 때는 인블로그(inblog) 같은 CMS를 활용합니다."
+          },
+          {
+            "label": "📓 Obsidian Vault (옵시디언 볼트)",
+            "isCorrect": false,
+            "whyNot": "옵시디언 볼트는 내 마크다운 노트를 모아두는 개인 폴더이지, 외부 웹사이트의 SEO 백링크나 검색 트래픽을 조사하는 도구가 아닙니다."
+          }
+        ]
+      }
+    ],
+    "comparisonTable": {
+      "headers": [
+        "비교 기준",
+        "🌐 SEO 백링크 (외부 백링크)",
+        "🕸️ 옵시디언 백링크 (내부 노트 백링크)"
+      ],
+      "rows": [
+        [
+          "초보자 한 줄 비유",
+          "남의 웹사이트가 우리 홈페이지로 걸어준 '외부 추천 링크'",
+          "내 개인 비밀 수첩 안에서 '3페이지 참고'라고 적어둔 '내부 메모 연결'"
+        ],
+        [
+          "누가 누구를 연결하나?",
+          "타인의 외부 웹사이트 ➔ 내 공개 웹사이트(도메인)",
+          "내 보관소(Vault) 안의 노트 A ➔ 내 보관소 안의 노트 B"
+        ],
+        [
+          "핵심 목적",
+          "검색엔진(Google 등)에게 사이트 신뢰도·권위를 인정받아 검색 상위 노출(SEO)",
+          "내 업무 규칙·대본·아이디어 메모 간의 관계를 엮어 빠르게 탐색"
+        ],
+        [
+          "관련 도구",
+          "Ahrefs(백링크·키워드 분석), Search Console, 인블로그(기업용 SEO 블로그)",
+          "Obsidian(옵시디언), Vault(볼트), Graph View(그래프 보기)"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "vs-arena-06",
+    "groupTag": "⑤ SEO 백링크 vs 옵시디언 백링크",
+    "badge": "보너스 심화 대결 · 스키마 4형제 구분",
+    "title": "DB 스키마 vs Postgres 스키마 vs JSON Schema vs SEO 스키마(Schema.org)",
+    "subtitle": "개발자와 마케터가 다 같이 '스키마(Schema)'라고 부르지만 실제로는 4가지 다른 뜻! 문맥에 따라 즉시 번역해 보세요.",
+    "contenders": [
+      {
+        "name": "DB 스키마 & Postgres 스키마",
+        "metaphor": "🗄️ 데이터베이스 표 설계도 & 구분 폴더",
+        "role": "DB에 어떤 테이블·열·타입을 둘지 정한 설계도(DB 스키마), 또는 Postgres 안에서 `public.projects`처럼 테이블 이름을 묶는 공간(이름공간)",
+        "examples": "Supabase 테이블 설계, `public` 스키마"
+      },
+      {
+        "name": "JSON Schema (제이슨 스키마)",
+        "metaphor": "✅ JSON 데이터 규격 검문소",
+        "role": "프로그램이나 AI가 주고받는 JSON 데이터에 필수 항목(`front`, `back`)이 다 있는지, 타입이 맞는지 검사하는 규칙 표준",
+        "examples": "`deck.schema.json`으로 카드 데이터 파일 오류 검증"
+      },
+      {
+        "name": "Schema.org & JSON-LD (웹·SEO 스키마)",
+        "metaphor": "🏷️ 검색엔진 로봇에게 보여주는 웹페이지 명찰",
+        "role": "웹페이지의 회사명·연락처·기사 정보를 검색엔진이 이해하기 쉽게 표기하는 공통 어휘(Schema.org)와 그 작성 형식(JSON-LD)",
+        "examples": "홈페이지 HTML 안에 넣는 `Organization` 구조화 데이터"
+      }
+    ],
+    "questions": [
+      {
+        "qId": "vs6-q1",
+        "prompt": "마케터가 '우리 회사 홈페이지 검색 노출을 위해 회사명과 공식 연락처 스키마(구조화 데이터)를 넣자'고 말할 때, 여기서 필요한 것은 무엇인가요?",
+        "options": [
+          {
+            "label": "🏷️ Schema.org 어휘를 사용해 JSON-LD 형식으로 웹페이지에 표기하는 '웹·SEO 구조화 데이터'",
+            "isCorrect": true,
+            "whyRight": "정답입니다! 웹·SEO 문맥에서 말하는 스키마는 검색엔진이 페이지의 의미(회사 정보 등)를 잘 이해하도록 Schema.org 어휘와 JSON-LD 형식으로 붙여주는 구조화 데이터입니다."
+          },
+          {
+            "label": "🗄️ PostgreSQL의 `public` 이름공간을 삭제하고 DB 테이블을 다시 만드는 작업",
+            "isCorrect": false,
+            "whyNot": "그것은 백엔드 데이터베이스 설계(DB 스키마 / Postgres 이름공간) 이야기이며, 웹페이지 SEO 구조화 데이터와는 다른 층위입니다."
+          }
+        ]
+      }
+    ],
+    "comparisonTable": {
+      "headers": [
+        "비교 기준",
+        "🗄️ DB 스키마 / Postgres 스키마",
+        "✅ JSON Schema",
+        "🏷️ Schema.org (SEO 스키마) + JSON-LD"
+      ],
+      "rows": [
+        [
+          "어디서 쓰나?",
+          "백엔드 데이터베이스 (Supabase, PostgreSQL 등)",
+          "API 통신 데이터, 설정 파일, 카드게임 JSON 데이터 검증",
+          "공개 웹사이트 HTML 페이지 (검색엔진 최적화·SEO)"
+        ],
+        [
+          "핵심 역할",
+          "테이블·열·타입 구조 설계 / 테이블 이름 구분 공간(`public.`)",
+          "JSON 데이터가 필수 항목과 타입 규칙을 지켰는지 검사",
+          "검색봇에게 '이건 회사명, 이건 연락처'라고 의미를 알려줌"
+        ],
+        [
+          "한 줄 구분법",
+          "데이터베이스 장부의 '뼈대 설계도'",
+          "JSON 파일의 불량품을 걸러내는 '규격 검사표'",
+          "검색엔진에게 달아주는 '웹페이지 친절 명찰'"
+        ]
+      ]
+    }
+  }
+]

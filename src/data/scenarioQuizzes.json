@@ -1,0 +1,582 @@
+[
+  {
+    "id": "sq-01",
+    "categoryTag": "② 로컬 vs VPS vs 원격",
+    "relatedTermIds": ["t023", "t022", "t082", "t034"],
+    "situation": "내가 노트북을 끄고 자는 동안에도 24시간 내내 OpenClaw 에이전트나 n8n 자동화 봇이 멈추지 않고 돌아가며 텔레그램 지시를 받게 하려면 프로그램을 어디에 올려서 실행해야 할까?",
+    "options": [
+      {
+        "text": "VPS (가상 사설 서버 — 예: 카페24 VPS 등 24시간 임대 가상 컴퓨터)",
+        "isCorrect": true,
+        "feedback": "정답입니다! VPS는 인터넷으로 빌리는 독립된 가상 컴퓨터로, 내 노트북 전원을 꺼도 24시간 365일 켜져 있어 상시 자동화 봇이나 에이전트를 중단 없이 운영할 수 있습니다."
+      },
+      {
+        "text": "로컬 (Local — 내 개인 노트북의 localhost 환경)",
+        "isCorrect": false,
+        "feedback": "[왜 로컬(Local)을 쓰면 안 될까요?] 로컬은 '내 눈앞의 노트북'에서 프로그램을 돌리는 방식입니다. 내가 노트북 덮개를 덮어 절전 모드가 되거나 전원을 끄고 자면 그 안에서 돌던 봇도 즉시 멈춰버립니다."
+      },
+      {
+        "text": "GitHub 저장소 (Repository — 코드 버전 보관소)",
+        "isCorrect": false,
+        "feedback": "[왜 GitHub를 쓰면 안 될까요?] GitHub는 코드 파일과 수정 이력을 보관하는 '온라인 설계도 창고'일 뿐입니다. 24시간 내내 켜져서 메신저 봇을 상시 구동해 주는 가상 컴퓨터(VPS) 역할을 하지 못합니다."
+      },
+      {
+        "text": "Obsidian Vault (옵시디언 볼트 — 마크다운 노트 폴더)",
+        "isCorrect": false,
+        "feedback": "[왜 Obsidian Vault를 쓰면 안 될까요?] 옵시디언 볼트는 마크다운(.md) 문서들을 모아두는 지식관리 폴더일 뿐, 서버 프로그램을 24시간 실행하는 컴퓨터 환경이 아닙니다."
+      }
+    ],
+    "summaryCompare": "내 PC(로컬)는 끄면 멈추고, GitHub는 코드 보관함입니다. 24시간 무중단 봇·서버 실행에는 항상 켜져 있는 임대 가상서버인 'VPS'가 정답입니다."
+  },
+  {
+    "id": "sq-02",
+    "categoryTag": "① 모델 vs 에이전트 vs 앱",
+    "relatedTermIds": ["t221", "t008", "t001", "t067"],
+    "situation": "AI가 한 번에 대충 답을 찍지 않고, ① 먼저 원인을 추론(Reasoning)해 계획을 세운 뒤 → ② 직접 파일 검색·코드 실행 도구로 행동(Action)하고 → ③ 그 결과를 관찰해 다음 행동을 이어가며 문제를 해결하는 에이전트 작동 구조를 무엇이라 부를까?",
+    "options": [
+      {
+        "text": "REA (ReAct — Reasoning + Acting 추론 및 행동 루프 구조)",
+        "isCorrect": true,
+        "feedback": "정답입니다! REA(ReAct)는 에이전트가 스스로 생각(Reasoning)하고 도구로 행동(Action)한 뒤 결과를 확인해 다시 추론을 이어가는 핵심 자율 문제 해결 작동 구조입니다."
+      },
+      {
+        "text": "단순 LLM 1회성 프롬프트 (Zero-shot Prompt)",
+        "isCorrect": false,
+        "feedback": "[왜 단순 프롬프트가 아닐까요?] 일반 1회성 프롬프트는 '질문 입력 → 머릿속 지식으로 1회 답변 출력'으로 끝납니다. 스스로 외부 도구를 실행(Action)하고 결과를 봐가며 여러 단계로 고쳐 나가는 루프 구조가 아닙니다."
+      },
+      {
+        "text": "모델 증류 (Knowledge Distillation)",
+        "isCorrect": false,
+        "feedback": "[왜 모델 증류를 고르면 안 될까요?] 모델 증류는 '거대 교사 모델의 지식을 작고 빠른 학생 모델에게 전수해 경량화하는 훈련 기법'이지, 에이전트가 추론하고 행동하는 런타임 작동 구조(REA)가 아닙니다."
+      },
+      {
+        "text": "정적 웹사이트 배포 (Static Deploy)",
+        "isCorrect": false,
+        "feedback": "[왜 정적 배포를 고르면 안 될까요?] 배포(Deploy)는 완성된 웹사이트를 서버에 올려 주소를 여는 작업이며, AI 에이전트의 추론·행동 작동 구조와는 무관합니다."
+      }
+    ],
+    "summaryCompare": "REA(Reasoning + Action)는 에이전트가 '생각 → 도구 실행 → 결과 확인 → 다시 생각'을 반복하며 복잡한 실무를 스스로 해결하는 핵심 원리입니다."
+  },
+  {
+    "id": "sq-03",
+    "categoryTag": "⑤ SEO 백링크 vs 옵시디언 백링크",
+    "relatedTermIds": ["t222", "t223", "t225", "t101"],
+    "situation": "우리 회사의 공식 도메인(예: company.com/blog)에 블로그를 연결해 구글 검색 상위 노출(테크니컬 SEO) 점수를 쌓고, 글을 읽은 잠재고객으로부터 상담 문의(리드·Lead)를 수집하려고 한다. 가장 알맞은 도구는?",
+    "options": [
+      {
+        "text": "인블로그 (inblog — 자사 도메인 연결 및 기업용 테크니컬 SEO·리드 수집 특화 블로그 CMS)",
+        "isCorrect": true,
+        "feedback": "정답입니다! 인블로그(inblog)는 기업이 자사 도메인에 블로그를 연결하고, 개발자 없이도 테크니컬 SEO 최적화와 잠재고객 리드(문의) 수집을 바로 실행할 수 있도록 특화된 기업용 블로그 CMS입니다."
+      },
+      {
+        "text": "옵시디언 (Obsidian — 로컬 마크다운 개인 노트 앱)",
+        "isCorrect": false,
+        "feedback": "[왜 옵시디언을 쓰면 안 될까요?] 옵시디언은 내 컴퓨터 폴더(Vault) 안에서 개인/내부 지식을 정리하고 연결하는 노트 앱입니다. 자사 도메인에 연결해 외부 검색 유입을 받고 고객 리드를 수집하는 기업용 마케팅 블로그 CMS가 아닙니다."
+      },
+      {
+        "text": "Ahrefs (에이치레프스 — SEO 키워드·백링크 분석 도구)",
+        "isCorrect": false,
+        "feedback": "[왜 Ahrefs를 쓰면 안 될까요?] Ahrefs는 검색 트래픽·키워드 난이도·외부 백링크를 분석하는 '진단·분석 레이더 도구'이지, 실제로 블로그 글을 발행하고 홈페이지를 운영하는 블로그 CMS(콘텐츠 관리 시스템)가 아닙니다!"
+      },
+      {
+        "text": "Playwright (브라우저 제어 테스트 도구)",
+        "isCorrect": false,
+        "feedback": "[왜 Playwright를 쓰면 안 될까요?] Playwright는 크롬 등 브라우저를 코드로 자동 클릭·테스트하는 개발 도구이지 블로그 콘텐츠를 발행하는 CMS가 아닙니다."
+      }
+    ],
+    "summaryCompare": "블로그 글을 자사 도메인에 발행하고 고객 문의(리드)를 받는 시스템(CMS)은 '인블로그(inblog)'이고, 키워드 난이도와 백링크를 조사하는 분석기는 'Ahrefs'입니다!"
+  },
+  {
+    "id": "sq-04",
+    "categoryTag": "⑤ SEO 백링크 vs 옵시디언 백링크",
+    "relatedTermIds": ["t223", "t225", "t157", "t158"],
+    "situation": "우리 회사 블로그 글을 쓰기 전에 '어떤 키워드가 검색량은 많으면서 경쟁 난이도(KD)는 낮은지' 조사하고, 경쟁사 홈페이지가 어떤 외부 미디어·블로그로부터 'SEO 백링크'를 많이 받고 있는지 분석하려면 무엇을 써야 할까?",
+    "options": [
+      {
+        "text": "Ahrefs (검색 트래픽, 키워드 난이도, 외부 백링크를 분석하는 전문 SEO 마케팅 분석 도구)",
+        "isCorrect": true,
+        "feedback": "정답입니다! Ahrefs는 시장 전체의 키워드 검색 난이도, 경쟁사 웹사이트의 예상 검색 트래픽, 그리고 외부 사이트들이 걸어준 SEO 백링크 구조를 정밀 분석할 때 쓰는 대표 전문 SEO 도구입니다."
+      },
+      {
+        "text": "Google Analytics 4 (GA4 — 자사 사이트 방문자 행동 분석 도구)",
+        "isCorrect": false,
+        "feedback": "[왜 GA4를 이 상황에 쓰면 안 될까요?] GA4는 '이미 우리 사이트에 들어온 방문자'가 어떤 버튼을 눌렀고 어디서 이탈했는지 측정하는 내부 분석기입니다. 남의 경쟁사 사이트가 어디서 백링크를 받았는지나 시장 키워드 난이도를 조사해 주지 못합니다."
+      },
+      {
+        "text": "옵시디언 그래프 뷰 (Obsidian Graph View — 개인 노트 백링크 시각화)",
+        "isCorrect": false,
+        "feedback": "[왜 옵시디언 그래프 뷰를 쓰면 안 될까요?] 옵시디언의 백링크·그래프 뷰는 내 개인 노트 보관소 안에서 내 메모끼리 연결된 선을 보여줄 뿐, 외부 웹사이트의 SEO 백링크나 구글 검색 키워드 난이도와는 아무 상관이 없습니다!"
+      },
+      {
+        "text": "인블로그 (inblog — 기업용 SEO 블로그 CMS)",
+        "isCorrect": false,
+        "feedback": "[왜 인블로그를 이 상황에 쓰면 안 될까요?] 인블로그는 우리 회사의 SEO 콘텐츠를 작성·발행하고 리드를 수집하는 '블로그 운영 플랫폼(CMS)'이지, 타 경쟁사 사이트의 외부 백링크망과 글로벌 키워드 난이도를 조사하는 전문 분석 툴이 아닙니다."
+      }
+    ],
+    "summaryCompare": "내 사이트 방문자 행동은 'GA4', 내 사이트 구글 노출 성적표는 'Search Console', 경쟁사 트래픽·키워드 난이도·외부 SEO 백링크 분석은 'Ahrefs'!"
+  },
+  {
+    "id": "sq-05",
+    "categoryTag": "① 모델 vs 에이전트 vs 앱",
+    "relatedTermIds": ["t224", "t106", "t066", "t001"],
+    "situation": "초거대 AI 모델은 너무 무겁고 비용이 비싸며 응답이 느리다. 그래서 거대 '교사 모델(Teacher)'이 문제를 푸는 지식과 판단 노하우를 작고 날렵한 '학생 모델(Student)'에게 전수해, 비용은 대폭 낮추고 속도는 높이면서 고성능을 유지하는 기법은?",
+    "options": [
+      {
+        "text": "모델 증류 (Knowledge Distillation — 지식 증류)",
+        "isCorrect": true,
+        "feedback": "정답입니다! 모델 증류(Knowledge Distillation)는 거대 교사 모델의 지식과 추론 패턴을 작고 빠른 학생 모델에게 전수해 속도와 비용 효율을 동시에 잡는 핵심 AI 경량화 기법입니다."
+      },
+      {
+        "text": "RAG (검색 증강 생성 — Retrieval-Augmented Generation)",
+        "isCorrect": false,
+        "feedback": "[왜 RAG를 고르면 안 될까요?] RAG는 모델을 작게 만드는 훈련 기법이 아니라, 질문할 때마다 외부 문서(지식베이스)에서 필요한 근거를 검색해 프롬프트에 붙여주는 '오픈북 검색 연결 방식'입니다."
+      },
+      {
+        "text": "Context Diet (맥락 다이어트)",
+        "isCorrect": false,
+        "feedback": "[왜 맥락 다이어트를 고르면 안 될까요?] 맥락 다이어트는 AI에게 질문할 때 불필요하거나 중복된 첨부 문서를 줄여 넣는 '사용자의 프롬프트 정리 습관'이지, 거대 모델의 지식을 작은 모델에 전수하는 모델 증류 기법이 아닙니다."
+      },
+      {
+        "text": "Auto Accept / Turbo 설정",
+        "isCorrect": false,
+        "feedback": "[왜 Auto Accept/Turbo가 아닐까요?] 에이전트의 Turbo 설정은 사람에게 매번 물어보는 승인 확인 창을 건너뛰어 진행을 빠르게 하는 옵션일 뿐, AI 모델을 경량화·증류하는 기술이 아닙니다."
+      }
+    ],
+    "summaryCompare": "외부 참고서를 찾아 보여주는 건 'RAG', 불필요한 프롬프트 자료를 빼는 건 '맥락 다이어트', 거대 교사 모델의 지식을 작고 빠른 학생 모델에 전수하는 건 '모델 증류'!"
+  },
+  {
+    "id": "sq-06",
+    "categoryTag": "⑤ SEO 백링크 vs 옵시디언 백링크",
+    "relatedTermIds": ["t225", "t103", "t153", "t167"],
+    "situation": "신입 마케터가 '구글 검색 상위 노출(SEO)에는 백링크가 중요하대요! 제가 오늘 옵시디언(Obsidian) 앱을 깔아서 우리 회사 홍보 노트를 100개 만들고 서로 [[백링크]]로 촘촘하게 연결해 놨으니 곧 구글 1등 할 거예요!'라고 보고했다. 무엇이 잘못되었을까?",
+    "options": [
+      {
+        "text": "옵시디언 백링크는 '내 개인 노트 보관소 안의 메모 간 연결'일 뿐이다. 구글 SEO 신뢰도를 높이려면 외부의 다른 웹사이트가 내 사이트 주소를 링크해 주는 'SEO 백링크'를 확보해야 한다.",
+        "isCorrect": true,
+        "feedback": "정답입니다! '백링크'라는 단어만 같을 뿐, 옵시디언 백링크(내 개인 노트 간 내부 참조)와 SEO 백링크(타인의 외부 웹사이트가 내 공개 사이트를 링크해 검색엔진 신뢰도를 높이는 것)는 완전히 다릅니다!"
+      },
+      {
+        "text": "옵시디언 노트를 100개가 아니라 1,000개 이상 연결해야 구글봇이 크롤링해 간다.",
+        "isCorrect": false,
+        "feedback": "[왜 이 생각이 틀렸을까요?] 옵시디언 Vault는 내 컴퓨터 안에 있는 개인 메모 폴더입니다. 노트를 1만 개 연결해도 구글 검색엔진의 외부 사이트 신뢰도 평가(SEO 백링크)와는 1%도 상관이 없습니다."
+      },
+      {
+        "text": "옵시디언 대신 웹사이트에 `noindex` 태그를 넣어야 구글 검색 1등이 된다.",
+        "isCorrect": false,
+        "feedback": "[왜 `noindex`를 쓰면 큰일 날까요?] `noindex`는 검색엔진에게 '이 페이지를 절대 검색 결과에 노출하지 마세요!'라고 차단하는 지시어입니다. 쓰면 오히려 검색 결과에서 사라집니다!"
+      },
+      {
+        "text": "백링크는 오직 유료 검색 광고(CPC)를 결제할 때만 생기는 것이다.",
+        "isCorrect": false,
+        "feedback": "[왜 틀렸을까요?] SEO 백링크는 외부 언론사·블로그·웹사이트가 우리 콘텐츠의 가치를 보고 링크해 주는 자연 검색(오가닉) 신뢰 신호이며, 클릭당 돈을 내는 유료 광고(CPC)와는 다릅니다."
+      }
+    ],
+    "summaryCompare": "SEO 백링크 = 외부 타 웹사이트가 내 사이트를 추천 링크한 것(검색 순위 상승). 옵시디언 백링크 = 내 개인 노트 폴더 안에서 메모끼리 연결한 것(개인 지식 정리)."
+  },
+  {
+    "id": "sq-07",
+    "categoryTag": "③ API vs MCP vs CLI",
+    "relatedTermIds": ["t039", "t038", "t029", "t068"],
+    "situation": "Claude나 Antigravity 같은 AI 에이전트에게 내 로컬 파일 검색, 노션 문서 읽기, Supabase DB 조회 같은 여러 외부 도구(Tool)들을 마치 'USB-C 멀티허브'에 꽂듯 표준화된 규격 하나로 손쉽게 연결해 주고 싶다. 이때 사용하는 표준 연결 규격은?",
+    "options": [
+      {
+        "text": "MCP (Model Context Protocol — AI 앱이 도구·자료에 연결되는 표준 규격)",
+        "isCorrect": true,
+        "feedback": "정답입니다! MCP는 AI 에이전트(클라이언트)가 다양한 외부 도구·데이터(MCP 서버)에 통일된 규격으로 바로 연결해 사용할 수 있게 만든 'AI 전용 만능 USB-C 연결 표준'입니다."
+      },
+      {
+        "text": "CLI (Command Line Interface — 명령줄 인터페이스)",
+        "isCorrect": false,
+        "feedback": "[왜 CLI를 고르면 안 될까요?] CLI는 터미널 검은 창에서 글자 명령어를 타이핑해 프로그램을 조작하는 '화면 조작 방식'이지, AI 앱에 외부 도구를 표준 규격으로 연결하는 프로토콜이 아닙니다."
+      },
+      {
+        "text": "n8n (워크플로 자동화 플랫폼)",
+        "isCorrect": false,
+        "feedback": "[왜 n8n을 고르면 안 될까요?] n8n은 정해진 단계대로 자동화 업무를 실행하는 '독립 플랫폼 앱'입니다. n8n이 MCP를 지원할 수는 있지만, n8n 자체가 AI 도구 연결 표준 규격(MCP)은 아닙니다."
+      },
+      {
+        "text": "HTML / CSS (웹 마크업 및 스타일 언어)",
+        "isCorrect": false,
+        "feedback": "[왜 HTML/CSS를 고르면 안 될까요?] HTML과 CSS는 웹페이지의 뼈대와 디자인 색상을 꾸미는 화면 언어이지, AI와 도구를 연결하는 통신 규격이 아닙니다."
+      }
+    ],
+    "summaryCompare": "일반 프로그램 간 통신 창구는 'API', AI에게 손발 도구를 표준 방식으로 꽂아주는 USB-C 규격은 'MCP', 터미널 글자 명령어 조작 방식은 'CLI'입니다."
+  },
+  {
+    "id": "sq-08",
+    "categoryTag": "④ GitHub vs 배포(Deploy) vs DB",
+    "relatedTermIds": ["t137", "t136", "t133", "t082"],
+    "situation": "내 컴퓨터에서 학습 카드게임 웹사이트 코딩을 완성하고 GitHub 저장소에 Push까지 마쳤다. 이제 다른 컴퓨터나 휴대폰에서도 인터넷 주소(`*.netlify.app` 등)를 입력해 바로 이 카드게임 화면을 열고 플레이할 수 있게 하려면 무엇을 해야 할까?",
+    "options": [
+      {
+        "text": "Netlify 또는 Vercel 같은 배포(Deploy) 플랫폼에 연결해 웹사이트를 빌드·배포한다.",
+        "isCorrect": true,
+        "feedback": "정답입니다! GitHub에 보관된 코드를 실제 인터넷 주소로 접속해 사용할 수 있는 웹사이트로 띄워 운영하는 과정이 '배포(Deploy)'이며, 대표적으로 Netlify나 Vercel을 사용합니다."
+      },
+      {
+        "text": "이미 GitHub에 Push 했으므로 아무것도 안 해도 자동으로 전용 게임 사이트가 열려 있다.",
+        "isCorrect": false,
+        "feedback": "[왜 GitHub Push만으로는 안 될까요?] GitHub는 기본적으로 '소스코드 파일과 수정 이력을 보관하는 금고'입니다. 별도로 배포(Netlify/Vercel/GitHub Pages 등)를 연결하지 않으면 코드 파일만 보일 뿐 사이트가 실행되지 않습니다."
+      },
+      {
+        "text": "내 컴퓨터의 `http://localhost:3000` 주소를 그대로 복사해서 친구 카톡으로 보내준다.",
+        "isCorrect": false,
+        "feedback": "[왜 `localhost:3000`을 보내면 안 될까요?] `localhost`는 '접속한 그 기기 자기 자신'을 뜻하는 주소입니다! 친구 휴대폰에서 `localhost:3000`을 누르면 친구 휴대폰 안을 찾게 되므로 절대 내 PC의 화면이 열리지 않습니다."
+      },
+      {
+        "text": "`.gitignore` 파일에 사이트 주소를 적어 넣는다.",
+        "isCorrect": false,
+        "feedback": "[왜 `.gitignore`를 쓰면 안 될까요?] `.gitignore`는 GitHub에 올리지 않을 비밀 파일이나 임시 폴더를 지정하는 제외 목록일 뿐, 웹사이트를 배포하는 기능이 전혀 없습니다."
+      }
+    ],
+    "summaryCompare": "GitHub는 '코드 금고', `localhost`는 '내 컴퓨터 전용 거울 주소', 남들도 접속하는 실제 인터넷 주소로 서비스를 오픈하는 것은 '배포(Deploy — Netlify/Vercel)'!"
+  },
+  {
+    "id": "sq-09",
+    "categoryTag": "④ GitHub vs 배포(Deploy) vs DB",
+    "relatedTermIds": ["t142", "t126", "t127", "t082"],
+    "situation": "사내 건축 규모검토 웹앱을 만들어서 직원들이 각자 로그인(Auth)한 뒤, 자기가 입력한 프로젝트 대지면적과 검토 상태를 저장하고 다른 직원들과 실시간으로 공유·조회하게 하려고 한다. 무엇을 붙이는 것이 가장 적합할까?",
+    "options": [
+      {
+        "text": "Supabase 같은 백엔드·데이터베이스(PostgreSQL DB + Auth 인증) 서비스",
+        "isCorrect": true,
+        "feedback": "정답입니다! 여러 사용자가 로그인(Auth)하고 구조화된 프로젝트 데이터를 실시간으로 함께 저장·조회하려면 공용 데이터베이스(DB)와 백엔드 기능을 제공하는 Supabase(또는 Postgres/Neon 등)가 적합합니다."
+      },
+      {
+        "text": "브라우저 LocalStorage (로컬스토리지 단독 사용)",
+        "isCorrect": false,
+        "feedback": "[왜 LocalStorage만 쓰면 안 될까요?] LocalStorage는 개인 학습 진도처럼 '내 브라우저 안에서만 유지할 데이터'에는 아주 좋지만, 다른 직원의 컴퓨터나 다른 기기와 실시간으로 데이터를 공유·동기화하지는 못합니다."
+      },
+      {
+        "text": "Playwright (브라우저 자동화 테스트 도구)",
+        "isCorrect": false,
+        "feedback": "[왜 Playwright를 쓰면 안 될까요?] Playwright는 브라우저 버튼을 자동으로 눌러보는 제어 도구이지, 직원 로그인과 프로젝트 데이터를 저장하는 데이터베이스가 아닙니다."
+      },
+      {
+        "text": "Schema.org / JSON-LD (SEO 스키마 마크업)",
+        "isCorrect": false,
+        "feedback": "[왜 SEO 스키마를 고르면 안 될까요?] Schema.org와 JSON-LD는 검색엔진 로봇에게 공개 웹페이지 정보를 알려주는 라벨일 뿐, 사내 데이터를 저장하는 데이터베이스(DB 스키마)가 아닙니다!"
+      }
+    ],
+    "summaryCompare": "혼자 내 브라우저에 기록을 남길 땐 'LocalStorage', 여러 사람이 로그인해 실시간 데이터를 저장·공유할 땐 '데이터베이스/백엔드(Supabase·PostgreSQL)'!"
+  },
+  {
+    "id": "sq-10",
+    "categoryTag": "① 모델 vs 에이전트 vs 앱",
+    "relatedTermIds": ["t010", "t012", "t015", "t003"],
+    "situation": "웹 채팅창에 코드를 일일이 복사·붙여넣기 하는 대신, AI가 내 컴퓨터 프로젝트 폴더 안에 직접 들어와서 여러 코드 파일을 읽고, 수정하고, 터미널 명령으로 테스트 실행까지 맡아주는 '코딩 에이전트'를 쓰고 싶다. 알맞은 선택은?",
+    "options": [
+      {
+        "text": "Codex (Codex CLI) 또는 Claude Code, Antigravity 에이전트",
+        "isCorrect": true,
+        "feedback": "정답입니다! Codex, Claude Code, Antigravity 등은 내 작업 폴더와 터미널에 직접 연결되어 파일 읽기·코드 수정·명령 실행·검증을 수행하는 코딩 에이전트 및 에이전트 개발 환경입니다."
+      },
+      {
+        "text": "순수 LLM 모델 파일만 달랑 메모장으로 열기",
+        "isCorrect": false,
+        "feedback": "[왜 순수 모델만으로는 안 될까요?] 모델(두뇌) 자체에는 내 폴더를 읽고 터미널을 조작하는 손발 도구(Tool)와 실행 환경이 없습니다. 이를 묶어 에이전트 형태로 만든 도구를 써야 합니다."
+      },
+      {
+        "text": "Google Search Console (구글 서치콘솔)",
+        "isCorrect": false,
+        "feedback": "[왜 서치콘솔을 쓰면 안 될까요?] 서치콘솔은 웹사이트의 구글 검색 노출과 클릭 실적을 확인하는 SEO 관리 도구이지 코딩 에이전트가 아닙니다."
+      },
+      {
+        "text": "Typecast (타입캐스트 TTS)",
+        "isCorrect": false,
+        "feedback": "[왜 타입캐스트를 쓰면 안 될까요?] 타입캐스트는 대본 글자를 AI 음성(내레이션)으로 바꿔주는 TTS 서비스이지 코딩 작업 에이전트가 아닙니다."
+      }
+    ],
+    "summaryCompare": "채팅창 복붙 상담은 일반 챗봇 앱, 내 프로젝트 폴더 안에서 직접 파일 수정·실행까지 수행하는 자율 기술자는 '코딩 에이전트(Codex, Claude Code, Antigravity)'!"
+  },
+  {
+    "id": "sq-11",
+    "categoryTag": "③ API vs MCP vs CLI",
+    "relatedTermIds": ["t044", "t045", "t058", "t042"],
+    "situation": "나는 이미 월정액으로 ChatGPT Plus(또는 Claude 유료 플랜)를 구독 중이다. 외부 프로그램 설정 화면에 있는 'BYOK (API Key 입력)' 칸에 내 OpenAI API 키를 발급받아 넣으면 요금은 어떻게 될까?",
+    "options": [
+      {
+        "text": "월정액 웹 구독 요금과는 별개로, 내가 넣은 API 키 계정에서 사용한 토큰만큼 API 요금이 따로 과금(차감)된다.",
+        "isCorrect": true,
+        "feedback": "정답입니다! '월정액 앱 구독권'과 'API 키 종량제 과금(BYOK)'은 결제 지갑이 다릅니다. BYOK로 API 키를 넣으면 내 구독 한도가 아니라 별도 API 잔액/요금으로 청구되므로 반드시 구분해야 합니다."
+      },
+      {
+        "text": "내가 이미 월정액 유료 구독 중이므로 API 키를 어디에 몇만 번을 쓰든 무조건 공짜다.",
+        "isCorrect": false,
+        "feedback": "[왜 공짜라고 생각하면 위험할까요?] 웹 채팅 구독료와 API 호출 요금은 별개의 상품입니다! API 키(BYOK)를 연결하면 쓰는 만큼 별도 API 요금이 나가며, 공식 지원 도구에서 '구독 계정 로그인 인증'을 쓸 때만 구독 사용권이 적용됩니다."
+      },
+      {
+        "text": "CLI(터미널)에서 실행하면 API 키를 써도 요금이 청구되지 않는다.",
+        "isCorrect": false,
+        "feedback": "[왜 틀렸을까요?] CLI는 검은 화면에서 글자로 조작하는 방식일 뿐입니다. CLI 프로그램이라도 인증을 API 키로 했다면 API 호출 요금이 그대로 발생합니다."
+      },
+      {
+        "text": "API 키는 비밀번호가 아니므로 GitHub 공개 저장소에 올려두면 할인 혜택을 받는다.",
+        "isCorrect": false,
+        "feedback": "[절대 금물!] API 키를 공개 GitHub나 마크다운 파일에 올리면 전 세계 해커 봇이 몇 초 만에 훔쳐 가서 내 카드로 거액의 API 요금을 폭탄 결제하게 됩니다! 반드시 `.env`와 `.gitignore`로 숨겨야 합니다."
+      }
+    ],
+    "summaryCompare": "구독 계정 로그인(월정액 사용권) ≠ BYOK API 키 연결(종량제 별도 과금) ≠ VPS 서버 요금(컴퓨터 임대료). 세 지갑을 절대 섞어 생각하지 마세요!"
+  },
+  {
+    "id": "sq-12",
+    "categoryTag": "④ GitHub vs 배포(Deploy) vs DB",
+    "relatedTermIds": ["t215", "t216", "t218", "t219"],
+    "situation": "개발팀 회의에서 A는 '카드게임 JSON 파일에 질문(`front`)과 정답(`back`) 항목이 빠지지 않았는지 자동 검사하는 규칙을 만들자'고 하고, B는 '조앤 홈페이지 HTML에 검색엔진이 회사명과 연락처를 잘 읽도록 구조화 데이터 어휘를 넣자'고 한다. A와 B가 말한 스키마는 각각 무엇일까?",
+    "options": [
+      {
+        "text": "A는 'JSON Schema(데이터 형식 검증 규칙)'이고, B는 'Schema.org / SEO 스키마(웹 구조화 데이터 어휘)'다.",
+        "isCorrect": true,
+        "feedback": "정답입니다! 똑같이 '스키마'라고 부르지만, JSON 데이터의 필수값·타입을 검사하는 규칙은 'JSON Schema'이고, 검색엔진에게 웹페이지의 회사·콘텐츠 의미를 알려주는 어휘 체계는 'Schema.org(SEO 스키마, JSON-LD로 표기)'입니다."
+      },
+      {
+        "text": "A와 B 둘 다 PostgreSQL의 `public` 이름공간(Namespace)을 뜻한다.",
+        "isCorrect": false,
+        "feedback": "[왜 틀렸을까요?] PostgreSQL의 `public` 스키마는 데이터베이스 안에서 테이블 이름을 구분하는 공간(폴더 같은 개념)입니다. JSON 파일 검사나 홈페이지 SEO 마크업과는 다른 개념입니다."
+      },
+      {
+        "text": "A는 GitHub 저장소이고, B는 VPS 가상서버다.",
+        "isCorrect": false,
+        "feedback": "[왜 틀렸을까요?] GitHub는 코드 저장소, VPS는 가상서버이며 둘 다 데이터 구조 규칙(스키마)이 아닙니다."
+      },
+      {
+        "text": "스키마만 잘 작성하면 홈페이지 내용이 사실인지 법규 계산까지 100% 자동으로 검증된다.",
+        "isCorrect": false,
+        "feedback": "[왜 주의해야 할까요?] 스키마 검사는 '질문 칸에 글자가 들어왔는가, 대지면적 칸에 숫자가 들어왔는가' 같은 형식·규격을 검사할 뿐, 그 숫자가 실제 건축 법규나 사실과 일치하는지까지는 보장하지 않습니다!"
+      }
+    ],
+    "summaryCompare": "DB 테이블 뼈대는 'DB 스키마', Postgres 안의 구분 방은 'Postgres 스키마(이름공간)', JSON 파일 규격 검사표는 'JSON Schema', 검색엔진용 웹페이지 명찰 어휘는 'Schema.org'!"
+  },
+  {
+    "id": "sq-13",
+    "categoryTag": "② 로컬 vs VPS vs 원격",
+    "relatedTermIds": ["t028", "t033", "t023", "t022"],
+    "situation": "내 윈도우 노트북에서 PowerShell(검은 터미널 창)을 열고 `ssh root@내VPS주소` 명령으로 카페24 VPS 서버에 접속한 상태다. 지금 이 창에서 프로그램을 실행하면 실제로 어느 컴퓨터에서 돌아갈까?",
+    "options": [
+      {
+        "text": "카페24 VPS 가상서버에서 돌아간다. 창은 내 노트북 화면에 떠 있지만 SSH로 원격 서버 셸에 접속했기 때문이다.",
+        "isCorrect": true,
+        "feedback": "정답입니다! 터미널 창이 내 노트북 모니터에 보인다고 해서 무조건 내 노트북(로컬)에서 실행되는 것이 아닙니다. SSH로 VPS에 접속한 뒤에는 그 창에 치는 모든 명령이 VPS 컴퓨터에서 실행됩니다."
+      },
+      {
+        "text": "무조건 내 윈도우 노트북(로컬) CPU에서 돌아간다. 왜냐하면 내 노트북의 PowerShell 창을 열었기 때문이다.",
+        "isCorrect": false,
+        "feedback": "[왜 로컬이라고 착각하면 위험할까요?] PowerShell은 '원격 접속 통로(SSH)'를 여는 창문 역할만 한 것입니다. 이미 SSH 터널을 통과해 VPS 안으로 들어갔으므로, 지금 명령을 실행하거나 파일을 지우면 내 노트북이 아니라 VPS 서버에서 일어납니다!"
+      },
+      {
+        "text": "GitHub 서버에서 자동으로 돌아간다.",
+        "isCorrect": false,
+        "feedback": "[왜 GitHub가 아닐까요?] SSH로 접속한 대상은 내가 빌린 VPS 가상서버이지 코드 보관소인 GitHub가 아닙니다."
+      },
+      {
+        "text": "크롬 브라우저 확장프로그램(Extension) 안에서 돌아간다.",
+        "isCorrect": false,
+        "feedback": "[왜 확장프로그램이 아닐까요?] PowerShell의 SSH 접속은 운영체제 터미널에서 원격 리눅스/윈도우 서버에 접속하는 방식이며 브라우저 확장프로그램과는 무관합니다."
+      }
+    ],
+    "summaryCompare": "눈앞에 보이는 창(PowerShell/터미널)의 위치가 아니라, '지금 그 터미널이 어느 컴퓨터(내 로컬 PC vs SSH 접속한 VPS)에 연결되어 있는가'를 항상 확인하세요!"
+  },
+  {
+    "id": "sq-14",
+    "categoryTag": "① 모델 vs 에이전트 vs 앱",
+    "relatedTermIds": ["t022", "t026", "t011", "t001"],
+    "situation": "내 일반 사무용 노트북에 `Codex CLI`를 설치해서 로컬 프로젝트 폴더에서 실행했다. 그렇다면 거대 AI 모델의 추론 계산(두뇌 연산) 자체도 내 노트북 그래픽카드(로컬 모델)에서 직접 돌아가고 있는 걸까?",
+    "options": [
+      {
+        "text": "아니다. Codex CLI라는 작업 프로그램만 내 노트북(로컬)에서 실행될 뿐, AI 두뇌 추론 계산은 인터넷 너머 OpenAI 서버에서 처리되어 돌아온다.",
+        "isCorrect": true,
+        "feedback": "정답입니다! '로컬 실행(Local Execution)'과 '로컬 모델(Local Model)'은 완전히 다릅니다. 내 노트북에서 에이전트(Codex/Claude Code)를 켜도 두뇌 연산은 클라우드 API 서버에 물어보고 답을 받아오는 구조입니다."
+      },
+      {
+        "text": "맞다. 내 노트북에 설치했으므로 수천억 개 파라미터의 GPT 모델이 내 노트북 C드라이브에서 인터넷 없이 직접 계산된다.",
+        "isCorrect": false,
+        "feedback": "[왜 '로컬 실행 = 로컬 모델'로 오해하면 안 될까요?] 초거대 모델을 내 장비에서 직접 돌리는 '로컬 모델(예: Ollama 등)'은 고사양 GPU와 수십 GB의 모델 파일 다운로드가 필요합니다. 반면 Codex CLI는 가벼운 작업자 프로그램만 내 PC에서 돌고 두뇌 계산은 OpenAI 서버가 담당합니다."
+      },
+      {
+        "text": "내 노트북이 자동으로 VPS 가상서버로 변신해서 다른 사람들에게 월세를 받는다.",
+        "isCorrect": false,
+        "feedback": "[왜 틀렸을까요?] 로컬 에이전트를 설치한다고 내 노트북이 임대형 VPS 서버 상품이 되는 것은 아닙니다."
+      },
+      {
+        "text": "인터넷을 끊어도 OpenAI 최신 모델과 계속 대화할 수 있다.",
+        "isCorrect": false,
+        "feedback": "[왜 틀렸을까요?] 작업 도구는 로컬에 있어도 AI 두뇌는 원격 서버에 있으므로 인터넷이 끊기면 모델 추론 응답을 받을 수 없습니다."
+      }
+    ],
+    "summaryCompare": "로컬 실행(작업 도구만 내 PC에서 구동, 두뇌는 원격 서버) ≠ 로컬 모델(모델 파일 자체를 내려받아 내 PC GPU로 직접 연산)."
+  },
+  {
+    "id": "sq-15",
+    "categoryTag": "③ API vs MCP vs CLI",
+    "relatedTermIds": ["t074", "t075", "t073", "t068"],
+    "situation": "고객이 홈페이지에서 문의 폼을 제출(또는 결제 완료)하는 그 즉시, 1초도 지체하지 않고 n8n 자동화 서버로 알림 신호와 데이터를 쏴서 다음 업무가 시작되게 하려고 한다. 이처럼 '사건이 발생했을 때 상대 시스템이 내 지정 URL로 즉시 알림 요청을 보내는 방식'은?",
+    "options": [
+      {
+        "text": "Webhook (웹훅 — 사건 발생 즉시 지정된 URL로 알림을 쏘는 방식)",
+        "isCorrect": true,
+        "feedback": "정답입니다! 웹훅(Webhook)은 사건이 터진 즉시 상대방 시스템이 내 자동화 주소(URL)로 데이터를 실어 초인종을 눌러주는 실시간 이벤트 전달 방식입니다."
+      },
+      {
+        "text": "Polling (폴링 — 일정 시간 간격으로 계속 변화가 있는지 물어보는 방식)",
+        "isCorrect": false,
+        "feedback": "[왜 폴링(Polling)과 구분해야 할까요?] 폴링은 사건이 났는지 몰라서 '5분마다 새 문의 왔니? 또 5분 뒤에 왔니?' 하고 내 쪽에서 주기적으로 계속 물어보는 방식입니다. 사건 즉시 상대가 알려주는 웹훅(Webhook)과는 정반대 방향입니다."
+      },
+      {
+        "text": " CSS (스타일 시트 언어)",
+        "isCorrect": false,
+        "feedback": "[왜 CSS를 쓰면 안 될까요?] CSS는 웹페이지의 색상과 여백을 꾸미는 디자인 언어이지 서버 간 실시간 이벤트 알림 방식이 아닙니다."
+      },
+      {
+        "text": "Git Fork (포크 — 남의 저장소를 내 계정으로 복제)",
+        "isCorrect": false,
+        "feedback": "[왜 Git Fork가 아닐까요?] Fork는 다른 사람의 GitHub 코드 저장소를 내 계정으로 떠오는 기능이지 실시간 자동화 알림 방식이 아닙니다."
+      }
+    ],
+    "summaryCompare": "사건이 터진 즉시 상대가 내 URL 초인종을 눌러 알려주면 '웹훅(Webhook)', 내가 5분마다 현관문을 열어 왔는지 확인하면 '폴링(Polling)'!"
+  },
+  {
+    "id": "sq-16",
+    "categoryTag": "① 모델 vs 에이전트 vs 앱",
+    "relatedTermIds": ["t015", "t010", "t011", "t031"],
+    "situation": "Google의 에이전트 개발 플랫폼인 `Antigravity`를 열어 작업 중이다. 오른쪽 자체 에이전트 채팅창에 지시할 때와, 아래쪽 내장 터미널 창을 열어 `codex` 명령어를 실행해 지시할 때 실제로 일하는 작업자는 누구일까?",
+    "options": [
+      {
+        "text": "자체 에이전트 창에 시키면 'Antigravity 에이전트'가 일하고, 내장 터미널에서 `codex`를 켜고 시키면 그 터미널 세션의 작업자는 'Codex'다.",
+        "isCorrect": true,
+        "feedback": "정답입니다! Antigravity는 자체 AI 에이전트도 가지고 있고 개발 작업실(IDE + 내장 터미널) 역할도 합니다. 따라서 내가 '어느 창(자체 채팅창 vs 터미널 속 Codex/Claude Code)'에 말을 걸었는지에 따라 실제 작업 주체가 달라집니다."
+      },
+      {
+        "text": "Antigravity 창 안에서 켰으므로 터미널에 `codex`나 `claude`를 쳐도 무조건 100% 똑같은 하나의 AI만 대답한다.",
+        "isCorrect": false,
+        "feedback": "[왜 틀렸을까요?] IDE의 내장 터미널은 여러 도구를 실행할 수 있는 열린 운동장입니다. 그 터미널 안에서 OpenAI의 `codex`나 Anthropic의 `claude`를 실행하면 그 순간 그 터미널 안에서는 해당 에이전트가 작업을 수행합니다."
+      },
+      {
+        "text": "Antigravity와 Gemini는 이름만 다를 뿐 완전히 똑같은 1:1 동의어다.",
+        "isCorrect": false,
+        "feedback": "[왜 구분해야 할까요?] Gemini는 Google의 'AI 모델 계열(및 챗봇 브랜드)'이고, Antigravity는 에이전트와 함께 코딩·터미널·브라우저 작업을 수행하는 '에이전트 개발 플랫폼(IDE)'입니다."
+      },
+      {
+        "text": "터미널을 열면 자동으로 카페24 유료 웹호스팅이 결제된다.",
+        "isCorrect": false,
+        "feedback": "[왜 틀렸을까요?] IDE 내장 터미널을 여는 것은 내 컴퓨터의 명령창을 여는 것일 뿐 외부 호스팅 결제와는 아무 상관이 없습니다."
+      }
+    ],
+    "summaryCompare": "작업실 건물(Antigravity IDE) 안에 있다고 다 같은 직원이 아닙니다! 어느 창에 지시했는지(자체 에이전트 창 vs 터미널에서 켠 Codex/Claude Code)를 보세요."
+  },
+  {
+    "id": "sq-17",
+    "categoryTag": "④ GitHub vs 배포(Deploy) vs DB",
+    "relatedTermIds": ["t095", "t096", "t042", "t087"],
+    "situation": "웹앱 코드에 OpenAI API 키와 Supabase 접속 비밀키를 연결해야 한다. 이 비밀키들이 `git push`를 할 때 실수로 GitHub에 올라가 유출되지 않도록 코드와 분리해 보관하고 Git 추적에서 제외하려면 어떤 조합을 써야 할까?",
+    "options": [
+      {
+        "text": "비밀키는 `.env` (환경변수 파일)에 분리해 적고, `.gitignore` 파일에 `.env`를 등록해 Git이 추적·업로드하지 않도록 제외한다.",
+        "isCorrect": true,
+        "feedback": "정답입니다! `.env`는 API 키 등 비밀 설정을 소스코드와 분리해 담는 환경변수 파일이고, `.gitignore`는 그 `.env` 파일이 Git 커밋·Push 대상에 포함되지 않도록 막아주는 필수 보안 콤비입니다."
+      },
+      {
+        "text": "`README.md` 파일 맨 첫 줄에 API 키를 굵은 글씨로 적어두면 GitHub가 알아서 암호화해 준다.",
+        "isCorrect": false,
+        "feedback": "[절대 안 됩니다!] `README.md`는 저장소에 들어오자마자 대문짝만하게 보이는 공개 소개 문서입니다. 여기에 API 키를 적으면 전 세계에 내 결제 카드를 공개하는 것과 같습니다!"
+      },
+      {
+        "text": "일단 키를 GitHub에 Push 한 뒤에 나중에 `.gitignore`에 이름만 추가하면 과거 기록에서도 자동으로 완전히 증발한다.",
+        "isCorrect": false,
+        "feedback": "[왜 매우 위험할까요?] `.gitignore`는 '아직 추적되지 않은 파일'을 안 올리게 막는 목록일 뿐입니다! 이미 한 번이라도 Commit·Push 된 비밀키는 Git 이력에 남으므로 즉시 키를 폐기(재발급)해야 합니다."
+      },
+      {
+        "text": "HTML 파일 `<title>` 태그 안에 API 키를 넣어 배포한다.",
+        "isCorrect": false,
+        "feedback": "[왜 안 될까요?] HTML `<title>`은 브라우저 탭 제목과 검색 결과에 그대로 노출되는 공개 텍스트이므로 비밀키를 절대 넣으면 안 됩니다."
+      }
+    ],
+    "summaryCompare": "비밀 API 키는 코드에 직접 적지 말고 `.env`(환경변수)에 분리 보관 + 커밋하기 전에 `.gitignore`로 업로드 원천 차단!"
+  },
+  {
+    "id": "sq-18",
+    "categoryTag": "③ API vs MCP vs CLI",
+    "relatedTermIds": ["t098", "t099", "t039", "t097"],
+    "situation": "AI 에이전트에게 매번 긴 업무 절차를 다시 설명하기 번거로워서, '조앤 숏폼 대본 검수 기준과 절차'를 재사용 가능한 매뉴얼(`SKILL.md`)로 묶어두었다. 이때 업무 지침 묶음인 `Skill`, 확장 패키지인 `Plugin`, 도구 연결 규격인 `MCP`의 관계로 가장 올바른 설명은?",
+    "options": [
+      {
+        "text": "Skill은 특정 업무의 지침·참고자료 묶음이고, MCP는 외부 도구를 연결하는 표준 규격이며, Plugin은 이러한 스킬·MCP 설정·기능을 한데 묶어 제품에 설치하는 확장 패키지다.",
+        "isCorrect": true,
+        "feedback": "정답입니다! Skill(업무 매뉴얼 지침), MCP(외부 도구 연결 규격), Plugin(기능·스킬·MCP 등을 묶어 설치하는 확장 패키지)은 각자 역할이 다르며 하나의 플러그인 안에 스킬과 MCP가 함께 들어갈 수도 있습니다."
+      },
+      {
+        "text": "`.md` (마크다운) 파일에 업무 순서만 적어두면 실행기나 트리거 없이도 매일 아침 9시에 혼자서 영상을 렌더링하고 유튜브에 업로드한다.",
+        "isCorrect": false,
+        "feedback": "[왜 마크다운 문서만으로는 자동 실행이 안 될까요?] `.md` 파일(규칙 문서·스킬)은 AI가 읽고 참고하는 '업무 매뉴얼 종이'일 뿐입니다! 실제로 돌아가려면 그 문서를 읽고 움직이는 에이전트 실행기·권한·트리거가 반드시 있어야 합니다."
+      },
+      {
+        "text": "`SKILL.md`라는 파일 이름은 오직 특정 회사 제품 한 곳에서만 독점 사용하며 다른 에이전트는 절대 읽지 못한다.",
+        "isCorrect": false,
+        "feedback": "[왜 틀렸을까요?] `SKILL.md`는 마크다운 기반의 업무 지침 구조로, Claude뿐 아니라 Codex, Antigravity, Hermes 등 여러 에이전트 생태계에서 폭넓게 활용됩니다."
+      },
+      {
+        "text": "플러그인(Plugin)만 설치하면 유료 서비스 로그인과 계정 권한 승인까지 자동으로 다 통과된다.",
+        "isCorrect": false,
+        "feedback": "[왜 주의해야 할까요?] 플러그인을 설치했다고 해서 외부 서비스의 내 계정 로그인(OAuth/API 키)이나 폴더 접근 권한까지 자동으로 해결되지는 않습니다."
+      }
+    ],
+    "summaryCompare": "Skill = 일하는 방법 매뉴얼(`SKILL.md`), MCP = 손발 도구를 꽂는 USB-C 규격, Plugin = 스킬과 도구를 묶어 설치하는 확장팩!"
+  },
+  {
+    "id": "sq-19",
+    "categoryTag": "① 모델 vs 에이전트 vs 앱",
+    "relatedTermIds": ["t050", "t118", "t117", "t021"],
+    "situation": "개발 초보자가 '우리 회사 소개 홈페이지를 새로 만들려고 하는데, Playwright라는 도구가 유명하니까 Playwright로 홈페이지를 디자인하고 만들면 되죠?'라고 물었다. 어떻게 바로잡아 주어야 할까?",
+    "options": [
+      {
+        "text": "Playwright는 이미 만들어진 웹 브라우저를 코드로 자동 조작·클릭·테스트하는 도구다! 웹사이트 화면과 기능을 새로 만들 때는 React나 Next.js, HTML/CSS를 써야 한다.",
+        "isCorrect": true,
+        "feedback": "정답입니다! 웹사이트를 짓는 건축 도구(HTML/CSS, React, Next.js)와, 만들어진 웹사이트 브라우저를 로봇처럼 클릭·조종·검사하는 도구(Playwright, CDP)는 완전히 다릅니다!"
+      },
+      {
+        "text": "맞다. Playwright는 Next.js의 최신 버전 이름이니 홈페이지 제작에 쓰면 된다.",
+        "isCorrect": false,
+        "feedback": "[왜 틀렸을까요?] Next.js는 React 기반 웹앱을 만드는 개발 프레임워크이고, Playwright는 브라우저 자동 제어 및 테스트 도구로 역할이 전혀 다릅니다."
+      },
+      {
+        "text": "홈페이지 화면을 만들려면 무조건 Typecast(타입캐스트)로 코딩해야 한다.",
+        "isCorrect": false,
+        "feedback": "[왜 틀렸을까요?] 타입캐스트는 글자를 음성으로 읽는 AI 성우(TTS) 서비스이지 웹사이트 제작 도구가 아닙니다."
+      },
+      {
+        "text": "홈페이지 디자인은 PostgreSQL 데이터베이스 스키마가 자동으로 그려준다.",
+        "isCorrect": false,
+        "feedback": "[왜 틀렸을까요?] PostgreSQL은 데이터를 표로 저장하는 백엔드 데이터베이스이지 화면 UI를 그리는 프론트엔드 도구가 아닙니다."
+      }
+    ],
+    "summaryCompare": "웹사이트 화면과 서비스를 짓는 도구는 'HTML/CSS · React · Next.js', 만들어진 브라우저 화면을 코드로 자동 클릭·제어하는 도구는 'Playwright'!"
+  },
+  {
+    "id": "sq-20",
+    "categoryTag": "① 모델 vs 에이전트 vs 앱",
+    "relatedTermIds": ["t207", "t214", "t200", "t199"],
+    "situation": "자동화 파이프라인이 숏폼 영상 MP4 파일을 에러 없이 렌더링해 냈고 소리 크기(LUFS) 기술 검사도 통과(`Technical Pass`)했다. 그렇다면 이 영상은 이제 '최종 승인(채택)'과 '외부 SNS 게시'까지 모두 완료된 상태라고 보고해도 될까?",
+    "options": [
+      {
+        "text": "절대 안 된다! '기술 검사 통과(Technical Pass)', '내용·시각 품질 검수(QA)', '사용자의 최종 채택(승인)', '실제 외부 게시'는 서로 다른 단계이므로 엄격히 구분해야 한다.",
+        "isCorrect": true,
+        "feedback": "정답입니다! 영상 파일이 깨지지 않고 재생된다는 '기술 통과(Technical Pass)'가 곧 대본 근거·화면 연출이 완벽하다는 뜻도 아니고, 사용자가 최종 승인(채택)했다는 뜻이나 외부 게시가 끝났다는 뜻도 아닙니다!"
+      },
+      {
+        "text": "MP4 파일이 에러 없이 만들어졌으니 무조건 최종 승인본(정본)으로 덮어쓰고 유튜브에 즉시 자동 업로드한다.",
+        "isCorrect": false,
+        "feedback": "[왜 위험할까요?] 파일 렌더링 성공은 기술적 출력이 끝났을 뿐입니다. 사람의 내용 확인과 최종 채택 승인 없이 기존 정본(Single Source of Truth)을 덮어쓰거나 외부에 자동 게시하면 큰 운영 사고로 이어집니다."
+      },
+      {
+        "text": "폴더 이름을 `FINAL_최종`으로 바꾸기만 하면 자동으로 검수와 승인이 완료된 효력을 갖는다.",
+        "isCorrect": false,
+        "feedback": "[왜 주의해야 할까요?] 과거 폴더명에 `FINAL`이 적혀 있거나 버전 숫자가 높다고 해서 현재 승인된 정본이라는 증거가 되지 않습니다. 실제 상태는 `CURRENT_STATE`와 승인 기록으로 확인해야 합니다."
+      },
+      {
+        "text": "TypeScript를 썼다면 영상 대본의 건축 법규 사실관계까지 컴퓨터가 100% 보증한 것이다.",
+        "isCorrect": false,
+        "feedback": "[왜 틀렸을까요?] TypeScript는 코드 변수에 숫자가 들어갔는지 글자가 들어갔는지 개발 단계의 타입 실수를 잡아줄 뿐, 대본 내용이나 건축 규모검토 계산식이 현실 법규에 맞는지까지 보증하지 않습니다."
+      }
+    ],
+    "summaryCompare": "코드 규칙 작성(MD) ≠ 구현 완료, 파일 재생 성공(Technical Pass) ≠ 내용 검수(QA) 통과 ≠ 사용자 최종 채택(승인) ≠ 외부 게시 완료!"
+  }
+]

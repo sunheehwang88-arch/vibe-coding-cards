@@ -10,13 +10,26 @@ const STAGE_BG = {
   7: 'bg-stage-7',
   8: 'bg-stage-8',
   9: 'bg-stage-9',
+  10: 'bg-stage-7',
+  11: 'bg-stage-8',
+  12: 'bg-stage-4',
+  13: 'bg-stage-2',
+  14: 'bg-stage-9',
+  15: 'bg-stage-3',
+  16: 'bg-stage-8',
+  17: 'bg-stage-5',
+  18: 'bg-stage-2',
+  19: 'bg-stage-5',
+  20: 'bg-stage-1',
+  21: 'bg-stage-6',
+  22: 'bg-stage-3',
 }
 
 export default function StageDot({ stage }) {
   return (
     <span
       aria-hidden="true"
-      className={`inline-block size-2 shrink-0 rounded-full ${STAGE_BG[stage]}`}
+      className={`inline-block size-2 shrink-0 rounded-full ${STAGE_BG[stage] ?? 'bg-stage-7'}`}
     />
   )
 }

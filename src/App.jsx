@@ -4,6 +4,9 @@ import Home from './pages/Home.jsx'
 import Session from './pages/Session.jsx'
 import Summary from './pages/Summary.jsx'
 import Collection from './pages/Collection.jsx'
+import VsBattle from './pages/VsBattle.jsx'
+import ScenarioQuiz from './pages/ScenarioQuiz.jsx'
+import WeaknessReview from './pages/WeaknessReview.jsx'
 import Flow from './pages/Flow.jsx'
 import Dashboard from './pages/Dashboard.jsx'
 
@@ -16,6 +19,9 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="summary" element={<Summary />} />
         <Route path="collection" element={<Collection />} />
+        <Route path="vs" element={<VsBattle />} />
+        <Route path="quiz" element={<ScenarioQuiz />} />
+        <Route path="review" element={<WeaknessReview />} />
         <Route path="flow" element={<Flow />} />
         <Route path="dashboard" element={<Dashboard />} />
       </Route>
