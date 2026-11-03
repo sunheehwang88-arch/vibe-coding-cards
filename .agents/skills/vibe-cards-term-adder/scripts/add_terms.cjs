@@ -96,11 +96,17 @@ function findDuplicate(candidate, normMap, cardsById) {
   if (candidate.id && cardsById.has(candidate.id)) {
     return cardsById.get(candidate.id);
   }
-  const candidateKeys = extractSearchKeys(candidate);
-  for (const k of candidateKeys) {
-    if (normMap.has(k)) {
-      return normMap.get(k);
-    }
+  const primaryNorm = normalizeTerm(String(candidate.term || '').replace(/\(.*?\)/g, ''));
+  if (primaryNorm && normMap.has(primaryNorm)) {
+    return normMap.get(primaryNorm);
+  }
+  const fullTermNorm = normalizeTerm(candidate.term);
+  if (fullTermNorm && normMap.has(fullTermNorm)) {
+    return normMap.get(fullTermNorm);
+  }
+  for (const a of (candidate.aliases || [])) {
+    const an = normalizeTerm(a);
+    if (an && normMap.has(an)) return normMap.get(an);
   }
   return null;
 }

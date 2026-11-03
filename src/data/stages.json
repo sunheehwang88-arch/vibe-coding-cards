@@ -57,7 +57,7 @@
   {
     "id": 12,
     "name": "연결 규격·계정·권한 (API·MCP·BYOK)",
-    "cardCount": 9
+    "cardCount": 11
   },
   {
     "id": 13,
@@ -87,7 +87,7 @@
   {
     "id": 18,
     "name": "웹·앱 개발과 스키마 설계",
-    "cardCount": 16
+    "cardCount": 19
   },
   {
     "id": 19,
@@ -107,6 +107,6 @@
   {
     "id": 22,
     "name": "운영 기준·검수(QA)·최종 승인",
-    "cardCount": 16
+    "cardCount": 17
   }
 ]
