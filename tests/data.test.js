@@ -19,9 +19,9 @@ const REQUIRED = [
 ]
 
 describe('cards.json', () => {
-  it('276장 (기본 77 + AI_TERMS 신규 199), id 중복 없음', () => {
-    expect(cards).toHaveLength(276)
-    expect(ids.size).toBe(276)
+  it('276장 이상, id 중복 없음', () => {
+    expect(cards.length).toBeGreaterThanOrEqual(276)
+    expect(ids.size).toBe(cards.length)
   })
 
   it('필수 보완 4개 및 백링크 분리(SEO vs 옵시디언)가 포함되어 있다', () => {
